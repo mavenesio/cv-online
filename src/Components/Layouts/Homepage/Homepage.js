@@ -3,25 +3,26 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../../Molescules/Header/Header';
 import ContactMe from '../../Molescules/ContactMe/ContactMe';
-import PropTypes from 'prop-types';
-import profileimage from '../../../assets/profilepicture.png';
+import kermit from '../../../assets/Kermit.png';
 import Card from '../../Atoms/Card/Card';
 
 const HomepageContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
+    height:20vh;
 `;
 
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
+    height:80vh;
+    overflow: auto;
 `;
 
 const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content:flex-end;
     flex-wrap: wrap;
     width: 100%;
     padding: 1rem;
@@ -30,6 +31,7 @@ const Row = styled.div`
 const PrimaryColumn = styled.div `
     display: flex;
     flex-direction: column;
+    justify-content:flex-start;
     flex-basis: 100%;
     flex: 1;
     padding: 1rem;
@@ -37,6 +39,7 @@ const PrimaryColumn = styled.div `
 const SecondaryColumn = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content:flex-start;
     flex-basis: 100%;
     flex: 3;
     padding: 1rem;
@@ -53,7 +56,6 @@ const Paragraph = styled.div`
 class Homepage extends React.Component {
 
   render() {
-      const {} = this.props;
     return (
         <HomepageContainer>
             <HeaderContainer>
@@ -63,12 +65,12 @@ class Homepage extends React.Component {
                 <PrimaryColumn>
                     <Row>
                         <Card>
-                            <Image src={profileimage} />
+                            <Image src={kermit} />
                         </Card>
                     </Row>
                     <Row>
                         <Card>
-                            <ContactMe></ContactMe>
+                            <ContactMe data={['28 años, Argentino ','(011)1556589904','mavenesio@gmail.com','Palermo,CABA,Argentina']}></ContactMe>
                         </Card>
                     </Row>
                 </PrimaryColumn>
@@ -85,14 +87,25 @@ class Homepage extends React.Component {
                             </Paragraph>
                         </Card>
                     </Row>
+                    <Row> 
+                        <Card title='Experiencia' titleColor='#a83269'>
+                            <Paragraph>
+                                fafaf
+                            </Paragraph>
+                        </Card>
+                    </Row>
+                    <Row> 
+                        <Card title='Educación' titleColor='#328fa8'>
+                            <Paragraph>
+                                fafaf
+                            </Paragraph>
+                        </Card>
+                    </Row>
                 </SecondaryColumn>
             </BodyContainer>
         </HomepageContainer>
     );
   }
 }
-Homepage.propTypes = {
-    
-  }
 
 export default Homepage;

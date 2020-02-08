@@ -8,7 +8,6 @@ const CardContainer = styled.div`
     background-color: white;
     display: flex;
     padding: 2rem;
-    height:100%;
     width:100%;
     flex-direction:column;
 `;

@@ -7,6 +7,7 @@ const HeaderContainer = styled.div`
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     background-color: grey;
     display: flex;
+    height:20vh;
     flex-direction:column;
 `;
 const HeaderName = styled.div`
@@ -15,11 +16,13 @@ const HeaderName = styled.div`
     justify-content: center;
 `;
 const HeaderFirstname = styled.h1`
+    margin:1rem;
     font-size: 50px;
     font-weight:300;
     color: white;
 `;
 const HeaderLastname = styled.h1`
+    margin:1rem;
     font-size: 50px;
     font-weight:700;
     color: white;
