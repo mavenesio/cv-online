@@ -13,20 +13,19 @@ const Data = styled.div`
 
 class Contactme extends React.Component {
 
+  renderData = () => {
+    return this.props.data.map((fact,index) => {return <Data key={index+fact} >{fact}</Data>} )
+  } 
   render() {
-      const {} = this.props;
     return (
         <ContactmeContainer>
-            <Data>28 años, Argentino </Data>
-            <Data>(011)1556589904</Data>
-            <Data>mavenesio@gmail.com</Data>
-            <Data>Palermo,CABA,Argentina</Data>
+            {this.renderData()}
         </ContactmeContainer>
     );
   }
 }
 Contactme.propTypes = {
-    
+    data: PropTypes.array.isRequired
   }
 
 export default Contactme;
