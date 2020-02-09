@@ -7,7 +7,7 @@ const CardContainer = styled.div`
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     background-color: white;
     display: flex;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     width:100%;
     flex-direction:column;
 `;
@@ -16,7 +16,11 @@ const TittleContainer = styled.div`
     flex-direction:row;
 `;
 const ColorTitle = styled.h1`
+    margin-top:unset;
     color: ${props => props.titleColor}
+`;
+const ColorlessTitle = styled.h1`
+    margin-top:unset;
 `;
 
 class Card extends React.Component {
@@ -26,8 +30,8 @@ class Card extends React.Component {
         <CardContainer>
         {title && 
             <TittleContainer>
-                <ColorTitle titleColor={titleColor}> {title.substr(0,3)}</ColorTitle>
-                <h1> {title.substr(3,title.length)}</h1>
+                <ColorTitle titleColor={(titleColor===undefined)? 'black' : titleColor}> {title.substr(0,3)}</ColorTitle>
+                <ColorlessTitle> {title.substr(3,title.length)}</ColorlessTitle>
             </TittleContainer>
         }
             {this.props.children}
