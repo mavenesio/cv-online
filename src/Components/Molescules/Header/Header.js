@@ -7,7 +7,7 @@ const HeaderContainer = styled.div`
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     background-color: grey;
     display: flex;
-    height:20vh;
+    height:25vh;
     flex-direction:column;
 `;
 const HeaderName = styled.div`

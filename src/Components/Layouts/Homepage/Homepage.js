@@ -10,7 +10,7 @@ const HomepageContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-    height:20vh;
+    height:25vh;
 `;
 
 const BodyContainer = styled.div`
@@ -69,7 +69,7 @@ class Homepage extends React.Component {
                         </Card>
                     </Row>
                     <Row>
-                        <Card>
+                        <Card title='Datos Personales'>
                             <ContactMe data={['28 años, Argentino ','(011)1556589904','mavenesio@gmail.com','Palermo,CABA,Argentina']}></ContactMe>
                         </Card>
                     </Row>
