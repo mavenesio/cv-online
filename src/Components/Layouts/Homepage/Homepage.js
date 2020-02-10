@@ -2,8 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../Molecules/Header/Header';
-import Experience from '../../Molecules/Experience/Experience';
-import SkillRating from '../../Atoms/SkillRating/SkillRating';
+import ExperienceList from '../../Molecules/Experience/ExperienceList';
 import DataList from '../../Molecules/DataList/DataList';
 import Card from '../../Atoms/Card/Card';
 import * as constants from '../../../constants/es-ES'
@@ -60,48 +59,6 @@ const Paragraph = styled.div`
 `;
 class Homepage extends React.Component {
   
-    renderSkills = (skills) => {
-        return skills.map((skill, index) => {
-            return (
-                <SkillRating 
-                    key={`${index} - ${skill.skillName}`}
-                    skillLevel={skill.skillRating} 
-                    skill={skill.skillName}
-                    />)
-        })
-    }
-    renderExperience = (experiences) => {
-        return experiences.map(experience => {
-            return (
-                    <Experience
-                        key={`${experience.title}`}
-                        description={experience.description}
-                        subTitle={experience.subTitle}
-                        leftTitle={experience.leftTitle}
-                        from={experience.from}
-                        to={experience.to}
-                        title={experience.title}
-                    />
-                    )
-        })
-    }
-
-    renderEducation = (Education) => {
-        return Education.map(ed => {
-            return (
-                    <Experience
-                        key={`${ed.title}`}
-                        description={ed.description}
-                        subTitle={ed.subTitle}
-                        leftTitle={ed.leftTitle}
-                        from={ed.from}
-                        to={ed.to}
-                        title={ed.title}
-                    />
-                    )
-        })
-    }
-
     render() {
         return (
             <HomepageContainer>
@@ -144,14 +101,12 @@ class Homepage extends React.Component {
                         </Row>
                         <Row> 
                             <Card title='Experiencia' titleColor='#a83269'>
-                                {this.renderExperience(constants.experiences)}
+                                <ExperienceList experiences={constants.experiences} />
                             </Card>
                         </Row>
                         <Row> 
                             <Card title='Educación' titleColor='#328fa8'>
-                                <Paragraph>
-                                    {this.renderEducation(constants.education)}
-                                </Paragraph>
+                                <ExperienceList experiences={constants.education} />
                             </Card>
                         </Row>
                     </SecondaryColumn>
