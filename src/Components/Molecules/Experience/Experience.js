@@ -44,20 +44,19 @@ const ExperienceTitle = styled.div`
     justify-content:space-between;
     width:100%;
 `;
-const CompanyNameTitle = styled.div`
+const TitleWrapper = styled.div`
     font-weight:700;
 `;
-const JobUbicationTitle = styled.div`
+const LeftTitleWrapper = styled.div`
     color:gray;
 `;
 
 class Experience extends React.Component {
 
   render() {
-    const {from, to, jobDescription, jobTitle, jobUbication,companyName} = this.props;
+    const {from, to, description, subTitle, leftTitle,title} = this.props;
     return (
         <ExperienceContainer>
-            
                 <TimeColumn>
                         {from} - {to} 
                 </TimeColumn>
@@ -65,16 +64,16 @@ class Experience extends React.Component {
                     <Row>
                         <ExperienceHeader>
                             <ExperienceTitle>
-                                <CompanyNameTitle>{companyName}</CompanyNameTitle>
-                                <JobUbicationTitle>{jobUbication}</JobUbicationTitle> 
+                                <TitleWrapper>{title}</TitleWrapper>
+                                <LeftTitleWrapper>{leftTitle}</LeftTitleWrapper> 
                             </ExperienceTitle>
                             <div>
-                                {jobTitle}
+                                {subTitle}
                             </div>
                         </ExperienceHeader>
                     </Row>
                     <Row>
-                        {jobDescription}
+                        {description}
                     </Row>
                 </ExperienceColumn>
         </ExperienceContainer>
@@ -84,10 +83,10 @@ class Experience extends React.Component {
 Experience.propTypes = {
     from: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
-    jobDescription: PropTypes.string.isRequired,
-    jobTitle:PropTypes.string.isRequired,
-    jobUbication:PropTypes.string.isRequired,
-    companyName:PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    subTitle:PropTypes.string.isRequired,
+    leftTitle:PropTypes.string.isRequired,
+    title:PropTypes.string.isRequired,
   }
 
 export default Experience;
