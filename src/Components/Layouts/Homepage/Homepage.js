@@ -1,11 +1,11 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../../Molescules/Header/Header';
-import ContactMe from '../../Molescules/ContactMe/ContactMe';
-import Experience from '../../Molescules/Experience/Experience';
+import Header from '../../Molecules/Header/Header';
+import ContactMe from '../../Molecules/ContactMe/ContactMe';
+import Experience from '../../Molecules/Experience/Experience';
 import SkillRating from '../../Atoms/SkillRating/SkillRating';
-import SkillList from '../../Molescules/SkillList/SkillList';
+import SkillList from '../../Molecules/SkillList/SkillList';
 import kermit from '../../../assets/Kermit.png';
 import Card from '../../Atoms/Card/Card';
 
