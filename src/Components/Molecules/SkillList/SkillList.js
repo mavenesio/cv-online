@@ -8,13 +8,30 @@ const SkillListContainer = styled.div`
     flex-direction:column;
 `;
 const Data = styled.div`
-    align-self:flex-end;
+    font-size:20px;
+    padding-left:0.5rem;
+    padding-bottom:1rem;
 `;
-
+const SkillContainer = styled.div`
+  display:flex;
+  flex-direction:row;
+`;
 class SkillList extends React.Component {
 
   renderData = () => {
-    return this.props.data.map((skill,index) => {return <Data key={index+skill} >{skill}</Data>} )
+    return this.props.data.map((skill,index) => {
+      return (
+        <SkillContainer>
+          <img 
+            src={skill.logo}  
+            height='30' 
+            width='30'
+            alt={skill.name}
+            />
+          <Data key={index+skill.name} >{skill.name}</Data>
+        </SkillContainer>)
+        } 
+      )
   } 
   render() {
     return (
