@@ -7,7 +7,7 @@ const DataContainer = styled.div`
     display:flex;
     flex-direction:column;
 `;
-const Data = styled.div`
+const DataName = styled.div`
     font-size:20px;
     padding-left:0.5rem;
     padding-bottom:1rem;
@@ -21,14 +21,14 @@ class DataList extends React.Component {
   renderData = () => {
     return this.props.data.map((fact,index) => {
       return (
-        <DataWrapper>
+        <DataWrapper key={index+fact.name}>
           <img 
             src={fact.logo}  
             height='30' 
             width='30'
             alt={fact.name}
             />
-          <Data key={index+fact.name} >{fact.name}</Data>
+          <DataName>{fact.name}</DataName>
         </DataWrapper>)
         } 
       )
@@ -41,7 +41,7 @@ class DataList extends React.Component {
     );
   }
 }
-Data.propTypes = {
+DataList.propTypes = {
     data: PropTypes.array.isRequired
   }
 
