@@ -49,31 +49,49 @@ const OtherSkills = [
     {name:'Agile/Scrum/Canvas', logo:scrum},
     {name:'MacOS/Ubuntu', logo:macos},
     {name:'Photoshop', logo:angular}];
-const experiences = [
-	{
-		companyName:'Codea IT',
-		jobTitle:'Full-Stack web developer',
-		from:'2019',
-		to:'Actualidad',
-		jobDescription:'Actualmente me encuentro desempeñando el rol de desarrollador FullStack en diferentes proyectos usando una gran variedad de tecnologías como Angular 8, React with typescript, NodeJs, NET core, mongoDB, My SQL, entre otras.',
-		jobUbication:'Ciudad Autónoma de BuenosAires, Argentina',
-	},
-	{
-		companyName:'Creative Coefficient S.R.L',
-		jobTitle:'Full-Stack web developer',
-		from:'2018',
-		to:'2019',
-		jobDescription:'Estuve, en mayor parte, tercerizado en la empresa NEC Latinoamerica desempeñando el papel de desarrollador FullStack, usando las tecnologías AngularJS, Angular 7, SQL server, .NET, entre otras. ',
-		jobUbication:'Ciudad Autónoma de BuenosAires, Argentina',
-	},
-	{
-		companyName:'Okapii',
-		jobTitle:'Full-Stack web developer',
-		from:'2017',
-		to:'2018',
-		jobDescription:'Me desempeñé como desarrollador fullstack creando sistemas intra, a medida, para diferentes clientes, usando tecnologías como AngularJS, ASP:NET y .NET SQL server',
-		jobUbication:'Ciudad Autónoma de BuenosAires, Argentina',
-	}
+    const experiences = [
+        {
+            title:'Codea IT',
+            subTitle:'Full-Stack web developer',
+            from:'2019',
+            to:'Actualidad',
+            description:'Actualmente me encuentro desempeñando el rol de desarrollador FullStack en diferentes proyectos usando una gran variedad de tecnologías como Angular 8, React with typescript, NodeJs, NET core, mongoDB, My SQL, entre otras.',
+            leftTitle:'Ciudad Autónoma de BuenosAires, Argentina',
+        },
+        {
+            title:'Creative Coefficient S.R.L',
+            subTitle:'Full-Stack web developer',
+            from:'2018',
+            to:'2019',
+            description:'Estuve, en mayor parte, tercerizado en la empresa NEC Latinoamerica desempeñando el papel de desarrollador FullStack, usando las tecnologías AngularJS, Angular 7, SQL server, .NET, entre otras. ',
+            leftTitle:'Ciudad Autónoma de BuenosAires, Argentina',
+        },
+        {
+            title:'Okapii',
+            subTitle:'Full-Stack web developer',
+            from:'2017',
+            to:'2018',
+            description:'Me desempeñé como desarrollador fullstack creando sistemas intra, a medida, para diferentes clientes, usando tecnologías como AngularJS, ASP:NET y .NET SQL server',
+            leftTitle:'Ciudad Autónoma de BuenosAires, Argentina',
+        }
+    ]
+const education = [
+    {
+        title:'Licenciatura En Sistemas',
+        subTitle:'',
+        from:'2013',
+        to:'Actualidad',
+        description:'',
+        leftTitle:'Facultad de Ingenieria de Buenos Aires (FIUBA)',
+    },
+    {
+        title:'Bachiller, modalidad Ciencias Sociales',
+        subTitle:'',
+        from:'2004',
+        to:'2009',
+        description:'',
+        leftTitle:'Instituto Saturnino E Unzue, 25 de Mayo',
+    }
 ]
 const contactData = [
     {name:'28 años, Argentino ', logo:user},
@@ -144,13 +162,29 @@ class Homepage extends React.Component {
         return experiences.map(experience => {
             return (
                     <Experience
-                        key={`${experience.companyName}`}
-                        jobDescription={experience.jobDescription}
-                        jobTitle={experience.jobTitle}
-                        jobUbication={experience.jobUbication}
+                        key={`${experience.title}`}
+                        description={experience.description}
+                        subTitle={experience.subTitle}
+                        leftTitle={experience.leftTitle}
                         from={experience.from}
                         to={experience.to}
-                        companyName={experience.companyName}
+                        title={experience.title}
+                    />
+                    )
+        })
+    }
+
+    renderEducation = (Education) => {
+        return Education.map(ed => {
+            return (
+                    <Experience
+                        key={`${ed.title}`}
+                        description={ed.description}
+                        subTitle={ed.subTitle}
+                        leftTitle={ed.leftTitle}
+                        from={ed.from}
+                        to={ed.to}
+                        title={ed.title}
                     />
                     )
         })
@@ -204,7 +238,7 @@ class Homepage extends React.Component {
                         <Row> 
                             <Card title='Educación' titleColor='#328fa8'>
                                 <Paragraph>
-                                    fafafa
+                                    {this.renderEducation(education)}
                                 </Paragraph>
                             </Card>
                         </Row>
