@@ -103,7 +103,7 @@ const HomepageContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-    height:25vh;
+    height:20vh;
 `;
 
 const BodyContainer = styled.div`
