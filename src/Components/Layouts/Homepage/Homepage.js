@@ -2,10 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../Molecules/Header/Header';
-import ContactMe from '../../Molecules/ContactMe/ContactMe';
 import Experience from '../../Molecules/Experience/Experience';
 import SkillRating from '../../Atoms/SkillRating/SkillRating';
-import SkillList from '../../Molecules/SkillList/SkillList';
+import DataList from '../../Molecules/DataList/DataList';
 import kermit from '../../../assets/Kermit.png';
 import Card from '../../Atoms/Card/Card';
 
@@ -172,22 +171,22 @@ class Homepage extends React.Component {
                         </Row>
                         <Row>
                             <Card title='Datos Personales'>
-                                <ContactMe data={contactData}></ContactMe>
+                                <DataList data={contactData}></DataList>
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Front-End Skills'>
-                                <SkillList data={FrontEndSkills} />
+                                <DataList data={FrontEndSkills} />
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Back-End Skills'>
-                                <SkillList data={BackEndSkills} />
+                                <DataList data={BackEndSkills} />
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Other Skills'>
-                                <SkillList data={OtherSkills} />
+                                <DataList data={OtherSkills} />
                             </Card>
                         </Row>
                     </PrimaryColumn>

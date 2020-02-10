@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const SkillListContainer = styled.div`
+const DataContainer = styled.div`
     display:flex;
     flex-direction:column;
 `;
@@ -12,37 +12,37 @@ const Data = styled.div`
     padding-left:0.5rem;
     padding-bottom:1rem;
 `;
-const SkillContainer = styled.div`
+const DataWrapper = styled.div`
   display:flex;
   flex-direction:row;
 `;
-class SkillList extends React.Component {
+class DataList extends React.Component {
 
   renderData = () => {
-    return this.props.data.map((skill,index) => {
+    return this.props.data.map((fact,index) => {
       return (
-        <SkillContainer>
+        <DataWrapper>
           <img 
-            src={skill.logo}  
+            src={fact.logo}  
             height='30' 
             width='30'
-            alt={skill.name}
+            alt={fact.name}
             />
-          <Data key={index+skill.name} >{skill.name}</Data>
-        </SkillContainer>)
+          <Data key={index+fact.name} >{fact.name}</Data>
+        </DataWrapper>)
         } 
       )
   } 
   render() {
     return (
-        <SkillListContainer>
+        <DataContainer>
             {this.renderData()}
-        </SkillListContainer>
+        </DataContainer>
     );
   }
 }
-SkillList.propTypes = {
+Data.propTypes = {
     data: PropTypes.array.isRequired
   }
 
-export default SkillList;
+export default DataList;
