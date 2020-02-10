@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const HeaderContainer = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    background-color: grey;
+    background: rgba(0,0,0,0.9);
     display: flex;
     height:20vh;
     flex-direction:column;
