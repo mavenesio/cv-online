@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ContactmeContainer = styled.div`
+const ContactMeContainer = styled.div`
     display:flex;
     flex-direction:column;
 `;
@@ -11,21 +11,21 @@ const Data = styled.div`
     align-self:flex-end;
 `;
 
-class Contactme extends React.Component {
+class ContactMe extends React.Component {
 
   renderData = () => {
     return this.props.data.map((fact,index) => {return <Data key={index+fact} >{fact}</Data>} )
   } 
   render() {
     return (
-        <ContactmeContainer>
+        <ContactMeContainer>
             {this.renderData()}
-        </ContactmeContainer>
+        </ContactMeContainer>
     );
   }
 }
-Contactme.propTypes = {
+ContactMe.propTypes = {
     data: PropTypes.array.isRequired
   }
 
-export default Contactme;
+export default ContactMe;
