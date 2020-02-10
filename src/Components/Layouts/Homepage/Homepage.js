@@ -4,9 +4,16 @@ import styled from 'styled-components';
 import Header from '../../Molescules/Header/Header';
 import ContactMe from '../../Molescules/ContactMe/ContactMe';
 import Experience from '../../Molescules/Experience/Experience';
+import SkillRating from '../../Atoms/SkillRating/SkillRating';
+import SkillList from '../../Molescules/SkillList/SkillList';
 import kermit from '../../../assets/Kermit.png';
 import Card from '../../Atoms/Card/Card';
-const experience = [
+
+const description = 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
+const FrontEndSkills = ['JavaScript','AngularJs','Angular7','HTML5','CSS3'];
+const BackEndSkills = ['NodeJs','.NET','SQL/MySql/PostgreSQL','MongoDB'];
+const OtherSkills = ['SVN/TFS/GIT','metodologiasagiles/Scrum/Canvas','MacOS/Ubuntu/','Photoshop'];
+const experiences = [
 	{
 		companyName:'Codea IT',
 		jobTitle:'Full-Stack web developer',
@@ -32,6 +39,8 @@ const experience = [
 		jobUbication:'Ciudad Autónoma de BuenosAires, Argentina',
 	}
 ]
+const contactData = ['28 años, Argentino ','(011)1556589904','mavenesio@gmail.com','Palermo,CABA,Argentina'];
+
 const HomepageContainer = styled.div`
 `;
 
@@ -81,21 +90,32 @@ const Paragraph = styled.div`
 `;
 class Homepage extends React.Component {
   
-
+    renderSkills = (skills) => {
+        return skills.map((skill, index) => {
+            return (
+                <SkillRating 
+                    key={`${index} - ${skill.skillName}`}
+                    skillLevel={skill.skillRating} 
+                    skill={skill.skillName}
+                    />)
+        })
+    }
     renderExperience = (experiences) => {
         return experiences.map(experience => {
             return (
-            <Experience
-                jobDescription={experience.jobDescription}
-                jobTitle={experience.jobTitle}
-                jobUbication={experience.jobUbication}
-                from={experience.from}
-                to={experience.to}
-                companyName={experience.companyName}
-            />)
+                    <Experience
+                        key={`${experience.companyName}`}
+                        jobDescription={experience.jobDescription}
+                        jobTitle={experience.jobTitle}
+                        jobUbication={experience.jobUbication}
+                        from={experience.from}
+                        to={experience.to}
+                        companyName={experience.companyName}
+                    />
+                    )
         })
-
     }
+
     render() {
         return (
             <HomepageContainer>
@@ -111,32 +131,40 @@ class Homepage extends React.Component {
                         </Row>
                         <Row>
                             <Card title='Datos Personales'>
-                                <ContactMe data={['28 años, Argentino ','(011)1556589904','mavenesio@gmail.com','Palermo,CABA,Argentina']}></ContactMe>
+                                <ContactMe data={contactData}></ContactMe>
+                            </Card>
+                        </Row>
+                        <Row>
+                            <Card title='Front-End Skills'>
+                                <SkillList data={FrontEndSkills} />
+                            </Card>
+                        </Row>
+                        <Row>
+                            <Card title='Back-End Skills'>
+                                <SkillList data={BackEndSkills} />
+                            </Card>
+                        </Row>
+                        <Row>
+                            <Card title='Other Skills'>
+                                <SkillList data={OtherSkills} />
                             </Card>
                         </Row>
                     </PrimaryColumn>
                     <SecondaryColumn>
                         <Row> 
                             <Card title='Resumen' titleColor='#32a852'>
-                                <Paragraph>
-                                    Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años 
-                                    de experiencia como desarrollador web FullStack. 
-                                    Soy capaz de aprender de forma constante y responsable, una persona proactiva 
-                                    con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado
-                                    posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente 
-                                    nuevas tecnologías y diferentes procesos. 
-                                </Paragraph>
+                                <Paragraph>{description}</Paragraph>
                             </Card>
                         </Row>
                         <Row> 
                             <Card title='Experiencia' titleColor='#a83269'>
-                                {this.renderExperience(experience)}
+                                {this.renderExperience(experiences)}
                             </Card>
                         </Row>
                         <Row> 
                             <Card title='Educación' titleColor='#328fa8'>
                                 <Paragraph>
-                                    fafaf
+                                    fafafa
                                 </Paragraph>
                             </Card>
                         </Row>
