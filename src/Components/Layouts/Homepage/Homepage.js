@@ -10,10 +10,12 @@ import * as constants from '../../../constants/es-ES'
 
 
 const HomepageContainer = styled.div`
+    background: rgba(0,0,0,1);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
 `;
 
 const HeaderContainer = styled.div`
-    height:20vh;
+    height:130px;
 `;
 const FooterContainer = styled.div`
     background-color:rgba(0,0,0,0.1);
@@ -22,7 +24,6 @@ const FooterContainer = styled.div`
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
-    height:80vh;
     overflow: auto;
     background: rgba(0,0,0,0.9);
     background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);

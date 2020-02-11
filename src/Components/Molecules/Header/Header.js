@@ -3,12 +3,19 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const HeaderContainer = styled.div`
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 140px;
     display: flex;
-    height:20vh;
-    flex-direction:column;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    background: rgba(0,0,0,1);
+    z-index: 1000;
 `;
 const HeaderName = styled.div`
     display:flex;
@@ -16,13 +23,13 @@ const HeaderName = styled.div`
     justify-content: center;
 `;
 const HeaderFirstname = styled.h1`
-    margin:1rem;
+    margin:1rem 0rem 1rem 1rem;
     font-size: 50px;
     font-weight:300;
     color: white;
 `;
 const HeaderLastname = styled.h1`
-    margin:1rem;
+    margin:1rem 1rem 1rem 0rem;
     font-size: 50px;
     font-weight:700;
     color: white;
@@ -35,26 +42,58 @@ const HeaderSubtitle = styled.h3`
     color:white;
 `;
 
-class Header extends React.Component {
-
-  render() {
-      const {firstName, lastName, subTitle} = this.props;
-    return (
-        <HeaderContainer>
-            <HeaderName>
-                <HeaderFirstname>
-                    {firstName},
-                </HeaderFirstname>
-                <HeaderLastname>
-                    {lastName}
-                </HeaderLastname>
-            </HeaderName>
-            <HeaderSubtitle>
-                    {subTitle}
-            </HeaderSubtitle>
-        </HeaderContainer>
-    );
+const Transition = styled.div`
+  .active {
+    visibility: visible;
+    transition: all 200ms ease-in;
   }
+  .hidden {
+    visibility: hidden;
+    transition: all 200ms ease-out;
+    transform: translate(0, -100%);
+  }
+`;
+
+class Header extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: true,
+            scrollPos: 0
+        };
+    }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+    handleScroll = () => {
+        const { scrollPos } = this.state;
+        console.log(document.body.getBoundingClientRect());
+        this.setState({
+          scrollPos: document.body.getBoundingClientRect().top,
+          show: document.body.getBoundingClientRect().top > scrollPos
+        });
+      }
+    render() {
+        const {firstName, lastName, subTitle} = this.props;
+        return (
+            <Transition>
+                    <HeaderContainer className={this.state.show ? "active" : "hidden"}>
+                        <HeaderName>
+                            <HeaderFirstname>
+                                {firstName},
+                            </HeaderFirstname>
+                            <HeaderLastname>
+                                {lastName}
+                            </HeaderLastname>
+                        </HeaderName>
+                        <HeaderSubtitle>
+                                {subTitle}
+                        </HeaderSubtitle>
+                    </HeaderContainer>
+            </Transition>
+        );
+    }
 }
 Header.propTypes = {
     firstName: PropTypes.string,
