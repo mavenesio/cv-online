@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../Molecules/Header/Header';
@@ -15,7 +14,6 @@ const HomepageContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-    height:130px;
 `;
 const FooterContainer = styled.div`
     background-color:rgba(0,0,0,0.1);
@@ -24,7 +22,6 @@ const FooterContainer = styled.div`
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
-    overflow: auto;
     background: rgba(0,0,0,0.9);
     background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
 `;
@@ -42,6 +39,7 @@ const PrimaryColumn = styled.div `
     flex-direction: column;
     justify-content:flex-start;
     flex-basis: 100%;
+    margin-left: 10rem;
     flex: 1;
     padding: 1rem;
 `;
@@ -51,6 +49,7 @@ const SecondaryColumn = styled.div`
     justify-content:flex-start;
     flex-basis: 100%;
     flex: 4;
+    margin-right: 10rem;
     padding: 1rem;
 `;
 const Image = styled.img`

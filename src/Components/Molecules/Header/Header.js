@@ -8,7 +8,6 @@ const HeaderContainer = styled.div`
     left: 0;
     width: 100%;
     margin: 0 auto;
-    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,19 +23,19 @@ const HeaderName = styled.div`
 `;
 const HeaderFirstname = styled.h1`
     margin:1rem 0rem 1rem 1rem;
-    font-size: 50px;
+    font-size: 4.5vw;
     font-weight:300;
     color: white;
 `;
 const HeaderLastname = styled.h1`
     margin:1rem 1rem 1rem 0rem;
-    font-size: 50px;
+    font-size: 4.5vw;
     font-weight:700;
     color: white;
 `;
 
 const HeaderSubtitle = styled.h3`
-    font-size: 30px;    
+    font-size: 2.5vw;    
     margin-top: unset;   
     margin-bottom: unset;
     color:white;
@@ -46,11 +45,13 @@ const Transition = styled.div`
   .active {
     visibility: visible;
     transition: all 200ms ease-in;
+    position: unset;
   }
   .hidden {
     visibility: hidden;
     transition: all 200ms ease-out;
     transform: translate(0, -100%);
+    position: fixed;
   }
 `;
 
