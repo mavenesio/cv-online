@@ -19,10 +19,14 @@ import email from '../assets/Logos/email.svg';
 import phone from '../assets/Logos/phone.png';
 import user from '../assets/Logos/user.png';
 
-import kermit from '../assets/Kermit.png';
+import github from '../assets/SocialMedia/github.svg';
+import linkedin from '../assets/SocialMedia/linkedin.svg';
+import download from '../assets/SocialMedia/download.png';
+
+import profilepicture from '../assets/profilepicture.png';
 
 
-const profilePicture = kermit;
+const profilePicture = profilepicture;
 const description = 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
 
 const frontEndSkills = [
@@ -95,4 +99,14 @@ const education = [
         leftTitle:'Instituto Saturnino E Unzue, 25 de Mayo',
     }
 ];
-export {description, education, frontEndSkills, backEndSkills, otherSkills, experiences, contactData, profilePicture}
+export {description,
+        education,
+        frontEndSkills,
+        backEndSkills,
+        otherSkills,
+        experiences,
+        contactData,
+        profilePicture,
+        github,
+        linkedin,
+        download}

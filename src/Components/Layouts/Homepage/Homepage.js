@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../Molecules/Header/Header';
+import Footer from '../../Molecules/Footer/Footer';
 import ExperienceList from '../../Molecules/Experience/ExperienceList';
 import DataList from '../../Molecules/DataList/DataList';
 import Card from '../../Atoms/Card/Card';
@@ -13,6 +14,9 @@ const HomepageContainer = styled.div`
 
 const HeaderContainer = styled.div`
     height:20vh;
+`;
+const FooterContainer = styled.div`
+    background-color:rgba(0,0,0,0.1);
 `;
 
 const BodyContainer = styled.div`
@@ -51,6 +55,7 @@ const SecondaryColumn = styled.div`
 const Image = styled.img`
     height:250px;
     width:250px;
+    border: black solid 5px;
     align-self:center;
 `;
 const Paragraph = styled.div`
@@ -111,6 +116,13 @@ class Homepage extends React.Component {
                         </Row>
                     </SecondaryColumn>
                 </BodyContainer>
+                <FooterContainer>
+                    <Footer
+                        linkedin='www.google.com'
+                        github='www.google.com'
+                        download='www.google.com'>
+                    </Footer>
+                </FooterContainer>
             </HomepageContainer>
         );
     }
