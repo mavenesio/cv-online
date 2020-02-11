@@ -118,9 +118,9 @@ class Homepage extends React.Component {
                 </BodyContainer>
                 <FooterContainer>
                     <Footer
-                        linkedin='www.google.com'
-                        github='www.google.com'
-                        download='www.google.com'>
+                        linkedin={constants.linkedinLink}
+                        github={constants.githubLink}
+                        download={constants.downloadLink}>
                     </Footer>
                 </FooterContainer>
             </HomepageContainer>

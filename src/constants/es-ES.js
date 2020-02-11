@@ -1,4 +1,6 @@
 
+import profilepicture from '../assets/profilepicture.png';
+
 import angular from '../assets/Logos/angular.svg';
 import css from '../assets/Logos/css.svg';
 import html from '../assets/Logos/html.svg';
@@ -23,8 +25,10 @@ import github from '../assets/SocialMedia/github.svg';
 import linkedin from '../assets/SocialMedia/linkedin.svg';
 import download from '../assets/SocialMedia/download.png';
 
-import profilepicture from '../assets/profilepicture.png';
+import downloadLink from '../assets/Curriculim_Vitae_Mariano_Andres_Venesio_B__F_.pdf';
 
+const linkedinLink = 'https://www.linkedin.com/in/mariano-andr%C3%A9s-venesio-bianchi-fiorito-a544568b/'
+const githubLink = 'https://github.com/Venedictto?tab=repositories'
 
 const profilePicture = profilepicture;
 const description = 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
@@ -99,7 +103,8 @@ const education = [
         leftTitle:'Instituto Saturnino E Unzue, 25 de Mayo',
     }
 ];
-export {description,
+export {
+        description,
         education,
         frontEndSkills,
         backEndSkills,
@@ -109,4 +114,8 @@ export {description,
         profilePicture,
         github,
         linkedin,
-        download}
+        download,
+        linkedinLink,
+        githubLink,
+        downloadLink
+    }
