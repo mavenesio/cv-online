@@ -11,6 +11,9 @@ import * as constants from '../../../constants/es-ES'
 const HomepageContainer = styled.div`
     background: rgba(0,0,0,1);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center
 `;
 
 const HeaderContainer = styled.div`
@@ -22,14 +25,16 @@ const FooterContainer = styled.div`
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content:center;
     background: rgba(0,0,0,0.9);
     background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 `;
 
 const Row = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     padding: 1rem;
 `;
@@ -38,18 +43,26 @@ const PrimaryColumn = styled.div `
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    flex-basis: 100%;
-    margin-left: 10rem;
-    flex: 1;
+    flex-basis: 15vw;
+    margin-left: 4vw;
+    @media (max-width: 1225px) {
+        flex-basis: 50vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
     padding: 1rem;
 `;
 const SecondaryColumn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    flex-basis: 100%;
-    flex: 4;
-    margin-right: 10rem;
+    flex-basis: 50vw;
+    margin-right: 4vw;
+    @media (max-width: 1225px) {
+        flex-basis: 50vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
     padding: 1rem;
 `;
 const Image = styled.img`
