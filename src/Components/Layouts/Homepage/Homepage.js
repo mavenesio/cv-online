@@ -53,10 +53,10 @@ const SecondaryColumn = styled.div`
     padding: 1rem;
 `;
 const Image = styled.img`
-    height:250px;
-    width:250px;
-    border: black solid 5px;
-    align-self:center;
+    height:auto;
+    width:100%;
+    border-radius:50%;
+    border: black solid 2px;
 `;
 const Paragraph = styled.div`
     text-align: justify;
@@ -73,9 +73,7 @@ class Homepage extends React.Component {
                 <BodyContainer>
                     <PrimaryColumn>
                         <Row>
-                            <Card>
-                                <Image src={constants.profilePicture} />
-                            </Card>
+                            <Image src={constants.profilePicture} />
                         </Row>
                         <Row>
                             <Card title='Datos Personales'>
