@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const HeaderContainer = styled.div`
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -13,7 +12,7 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    background: rgba(0,0,0,1);
+    background: ${props=> props.theme.colors.background.primary};
     z-index: 1000;
 `;
 const HeaderName = styled.div`
@@ -41,58 +40,24 @@ const HeaderSubtitle = styled.h3`
     color:white;
 `;
 
-const Transition = styled.div`
-  .active {
-    visibility: visible;
-    transition: all 200ms ease-in;
-    position: unset;
-  }
-  .hidden {
-    visibility: hidden;
-    transition: all 200ms ease-out;
-    transform: translate(0, -100%);
-    position: fixed;
-  }
-`;
-
 class Header extends React.Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {
-            show: true,
-            scrollPos: 0
-        };
-    }
-    componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
-    }
-    handleScroll = () => {
-        const { scrollPos } = this.state;
-        console.log(document.body.getBoundingClientRect());
-        this.setState({
-          scrollPos: document.body.getBoundingClientRect().top,
-          show: document.body.getBoundingClientRect().top > scrollPos
-        });
-      }
     render() {
         const {firstName, lastName, subTitle} = this.props;
         return (
-            <Transition>
-                    <HeaderContainer className={this.state.show ? "active" : "hidden"}>
-                        <HeaderName>
-                            <HeaderFirstname>
-                                {firstName},
-                            </HeaderFirstname>
-                            <HeaderLastname>
-                                {lastName}
-                            </HeaderLastname>
-                        </HeaderName>
-                        <HeaderSubtitle>
-                                {subTitle}
-                        </HeaderSubtitle>
-                    </HeaderContainer>
-            </Transition>
+            <HeaderContainer>
+                <HeaderName>
+                    <HeaderFirstname>
+                        {firstName},
+                    </HeaderFirstname>
+                    <HeaderLastname>
+                        {lastName}
+                    </HeaderLastname>
+                </HeaderName>
+                <HeaderSubtitle>
+                        {subTitle}
+                </HeaderSubtitle>
+            </HeaderContainer>
         );
     }
 }
