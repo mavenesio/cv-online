@@ -9,6 +9,7 @@ const CardContainer = styled.div`
     display: flex;
     padding: 1rem 2rem 2rem 2rem;
     width:100%;
+    min-width:350px;
     flex-direction:column;
     color:white;
 `;
