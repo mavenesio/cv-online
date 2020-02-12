@@ -9,25 +9,19 @@ import * as constants from '../../../constants/es-ES'
 
 
 const HomepageContainer = styled.div`
-    background: rgba(0,0,0,1);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
+    background: ${props=> props.theme.colors.background.secondary};
+    background: linear-gradient(180deg, ${props=> props.theme.colors.background.primary} 0%, ${props=> props.theme.colors.background.secondary} 35%);
     display:flex;
     flex-direction:column;
     justify-content:center
-`;
-
-const HeaderContainer = styled.div`
-`;
-const FooterContainer = styled.div`
-    background-color:rgba(0,0,0,0.1);
 `;
 
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content:center;
-    background: rgba(0,0,0,0.9);
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
+    background: ${props=> props.theme.colors.background.secondary};
+    background: linear-gradient(180deg, ${props=> props.theme.colors.background.primary} 0%, ${props=> props.theme.colors.background.secondary} 35%);
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 `;
@@ -79,9 +73,7 @@ class Homepage extends React.Component {
     render() {
         return (
             <HomepageContainer>
-                <HeaderContainer>
-                    <Header firstName='Mariano Andrés' lastName='Venesio Bianchi Fiorito' subTitle='Full-Stack Developer'></Header>
-                </HeaderContainer>
+                <Header firstName='Mariano Andrés' lastName='Venesio Bianchi Fiorito' subTitle='Full-Stack Developer'></Header>
                 <BodyContainer>
                     <PrimaryColumn>
                         <Row>
@@ -126,13 +118,11 @@ class Homepage extends React.Component {
                         </Row>
                     </SecondaryColumn>
                 </BodyContainer>
-                <FooterContainer>
-                    <Footer
-                        linkedin={constants.linkedinLink}
-                        github={constants.githubLink}
-                        download={constants.downloadLink}>
-                    </Footer>
-                </FooterContainer>
+                <Footer
+                    linkedin={constants.linkedinLink}
+                    github={constants.githubLink}
+                    download={constants.downloadLink}>
+                </Footer>
             </HomepageContainer>
         );
     }

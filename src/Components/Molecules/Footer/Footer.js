@@ -3,23 +3,24 @@ import styled from 'styled-components';
 import * as constants from '../../../constants/es-ES'
 import PropTypes from 'prop-types';
 
-const HeaderContainer = styled.div`
+const FooterContainer = styled.div`
     display: flex;
     flex-direction:row;
     justify-content:center;
+    margin-top:2rem;
+    background-color: ${props=> props.theme.colors.background.secondary};
 `;
 
 const SocialMediaButton = styled.a`
     padding:2rem;
-
 `;
 
 
-class Header extends React.Component {
+class Footer extends React.Component {
   render() {
       const {linkedin, github, download} = this.props;
     return (
-        <HeaderContainer>
+        <FooterContainer>
             <SocialMediaButton href={linkedin} target="_blank">
                 <img 
                     src={constants.linkedin} 
@@ -44,14 +45,14 @@ class Header extends React.Component {
                     width='50'
                 />
             </SocialMediaButton>
-        </HeaderContainer>
+        </FooterContainer>
     );
   }
 }
-Header.propTypes = {
+Footer.propTypes = {
     linkedin: PropTypes.string,
     github: PropTypes.string,
     download: PropTypes.string,
   }
 
-export default Header;
+export default Footer;
