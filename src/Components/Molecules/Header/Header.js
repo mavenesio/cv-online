@@ -13,7 +13,7 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    background: rgba(44, 83, 100,1);
+    background: rgba(0,0,0,1);
     z-index: 1000;
 `;
 const HeaderName = styled.div`

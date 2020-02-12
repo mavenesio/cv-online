@@ -9,8 +9,8 @@ import * as constants from '../../../constants/es-ES'
 
 
 const HomepageContainer = styled.div`
-    background: rgba(44, 83, 100,1);
-    background: linear-gradient(180deg, rgba(44, 83, 100,1) 0%, rgba(44, 83, 100,0.4) 35%, rgba(44, 83, 100,0.1) 100%);
+    background: rgba(0,0,0,1);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
     display:flex;
     flex-direction:column;
     justify-content:center
@@ -19,15 +19,15 @@ const HomepageContainer = styled.div`
 const HeaderContainer = styled.div`
 `;
 const FooterContainer = styled.div`
-    background-color:rgba(44, 83, 100,0.1);
+    background-color:rgba(0,0,0,0.1);
 `;
 
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content:center;
-    background: rgba(44, 83, 100,0.9);
-    background: linear-gradient(180deg, rgba(44, 83, 100,0.9) 0%, rgba(44, 83, 100,0.4) 35%, rgba(44, 83, 100,0.1) 100%);
+    background: rgba(0,0,0,0.9);
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.1) 100%);
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 `;
@@ -67,7 +67,7 @@ const SecondaryColumn = styled.div`
 `;
 const Image = styled.img`
     height:auto;
-    width:100%;
+    width:90%;
     border-radius:50%;
     border: black solid 2px;
 `;

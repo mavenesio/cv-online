@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 const CardContainer = styled.div`
     box-shadow: 4px 20px 20px 4px rgba(0,0,0,0.7);
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    background-color: white;
+    background: rgba(0,0,0,0.4);
     display: flex;
     padding: 1rem 2rem 2rem 2rem;
     width:100%;
     flex-direction:column;
+    color:white;
 `;
 const TittleContainer = styled.div`
     display:flex;
@@ -30,7 +31,7 @@ class Card extends React.Component {
         <CardContainer>
         {title && 
             <TittleContainer>
-                <ColorTitle titleColor={(titleColor===undefined)? 'black' : titleColor}> {title.substr(0,3)}</ColorTitle>
+                <ColorTitle titleColor={(titleColor===undefined)? 'white' : titleColor}> {title.substr(0,3)}</ColorTitle>
                 <ColorlessTitle> {title.substr(3,title.length)}</ColorlessTitle>
             </TittleContainer>
         }
