@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const CardContainer = styled.div`
-    box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.2);
+    box-shadow: 4px 20px 20px 4px rgba(0,0,0,0.7);
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     background-color: white;
     display: flex;
