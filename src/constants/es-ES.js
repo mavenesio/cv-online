@@ -103,7 +103,13 @@ const education = [
         leftTitle:'',
     }
 ];
+const firstName = 'Mariano Andrés';
+const lastName = 'Venesio Bianchi Fiorito';
+const job = 'Full-Stack Web Developer';
 export {
+        job,
+        firstName,
+        lastName,
         description,
         education,
         frontEndSkills,

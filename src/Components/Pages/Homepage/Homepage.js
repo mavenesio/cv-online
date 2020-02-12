@@ -73,7 +73,11 @@ class Homepage extends React.Component {
     render() {
         return (
             <HomepageContainer>
-                <Header firstName='Mariano Andrés' lastName='Venesio Bianchi Fiorito' subTitle='Full-Stack Developer'></Header>
+                <Header 
+                    firstName={constants.firstName}
+                    lastName={constants.lastName}
+                    subTitle={constants.job}
+                />
                 <BodyContainer>
                     <PrimaryColumn>
                         <Row>
@@ -81,22 +85,22 @@ class Homepage extends React.Component {
                         </Row>
                         <Row>
                             <Card title='Datos Personales'>
-                                <DataList data={constants.contactData}></DataList>
+                                <DataList data={constants.contactData}/>
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Front-End Skills'>
-                                <DataList data={constants.frontEndSkills} />
+                                <DataList data={constants.frontEndSkills}/>
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Back-End Skills'>
-                                <DataList data={constants.backEndSkills} />
+                                <DataList data={constants.backEndSkills}/>
                             </Card>
                         </Row>
                         <Row>
                             <Card title='Other Skills'>
-                                <DataList data={constants.otherSkills} />
+                                <DataList data={constants.otherSkills}/>
                             </Card>
                         </Row>
                     </PrimaryColumn>
@@ -108,12 +112,12 @@ class Homepage extends React.Component {
                         </Row>
                         <Row> 
                             <Card title='Experiencia' titleColor='#a83269'>
-                                <ExperienceList experiences={constants.experiences} />
+                                <ExperienceList experiences={constants.experiences}/>
                             </Card>
                         </Row>
                         <Row> 
                             <Card title='Educación' titleColor='#328fa8'>
-                                <ExperienceList experiences={constants.education} />
+                                <ExperienceList experiences={constants.education}/>
                             </Card>
                         </Row>
                     </SecondaryColumn>
@@ -121,8 +125,8 @@ class Homepage extends React.Component {
                 <Footer
                     linkedin={constants.linkedinLink}
                     github={constants.githubLink}
-                    download={constants.downloadLink}>
-                </Footer>
+                    download={constants.downloadLink}
+                />
             </HomepageContainer>
         );
     }

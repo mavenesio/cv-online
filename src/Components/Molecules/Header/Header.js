@@ -11,9 +11,8 @@ const HeaderContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-weight: bolder;
+    color: ${props=> props.theme.colors.font.primary};
     background: ${props=> props.theme.colors.background.primary};
-    z-index: 1000;
 `;
 const HeaderName = styled.div`
     display:flex;
@@ -22,22 +21,19 @@ const HeaderName = styled.div`
 `;
 const HeaderFirstname = styled.h1`
     margin:1rem 0rem 1rem 1rem;
-    font-size: 4.5vw;
-    font-weight:300;
-    color: white;
+    font-size: ${props=> props.theme.fontSizes.header};
+    font-weight:${props=> props.theme.fontWeight.normal};
 `;
 const HeaderLastname = styled.h1`
     margin:1rem 1rem 1rem 0rem;
-    font-size: 4.5vw;
-    font-weight:700;
-    color: white;
+    font-size: ${props=> props.theme.fontSizes.header};
+    font-weight:${props=> props.theme.fontWeight.bold};
 `;
 
 const HeaderSubtitle = styled.h3`
-    font-size: 2.5vw;    
+    font-size: ${props=> props.theme.fontSizes.headerSubtitle};
     margin-top: unset;   
     margin-bottom: unset;
-    color:white;
 `;
 
 class Header extends React.Component {

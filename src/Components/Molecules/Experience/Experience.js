@@ -8,6 +8,7 @@ const ExperienceContainer = styled.div`
     flex-direction: row;
     padding-bottom:2rem;
     padding-top:2rem;
+    color: ${props=> props.theme.fontSizes.normal};
 `;
 const Row = styled.div`
     display: flex;
@@ -45,10 +46,10 @@ const ExperienceTitle = styled.div`
     width:100%;
 `;
 const TitleWrapper = styled.div`
-    font-weight:700;
+    font-weight: ${props=> props.theme.fontWeight.bold};
 `;
 const LeftTitleWrapper = styled.div`
-    color:gray;
+    color: ${props=> props.theme.colors.font.secondary};
 `;
 const TimeWrapper = styled.div`
     display:flex;

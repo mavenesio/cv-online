@@ -11,7 +11,7 @@ const CardContainer = styled.div`
     width:100%;
     min-width:350px;
     flex-direction:column;
-    color:white;
+    color: ${props=> props.theme.colors.font.primary};
 `;
 const TittleContainer = styled.div`
     display:flex;
@@ -19,8 +19,8 @@ const TittleContainer = styled.div`
 `;
 const ColorTitle = styled.h1`
     margin-top:unset;
-    color: ${props => props.titleColor}
-`;
+    color: ${props => (props.titleColor === undefined) ? props.theme.colors.font.primary : props.titleColor}
+`; 
 const ColorlessTitle = styled.h1`
     margin-top:unset;
 `;
@@ -32,7 +32,7 @@ class Card extends React.Component {
         <CardContainer>
         {title && 
             <TittleContainer>
-                <ColorTitle titleColor={(titleColor===undefined)? 'white' : titleColor}> {title.substr(0,3)}</ColorTitle>
+                <ColorTitle titleColor={titleColor}> {title.substr(0,3)}</ColorTitle>
                 <ColorlessTitle> {title.substr(3,title.length)}</ColorlessTitle>
             </TittleContainer>
         }

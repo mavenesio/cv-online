@@ -6,20 +6,25 @@ import { ThemeProvider } from "styled-components";
 const theme = {
     colors: {
       background: {
-        primary: 'black',
-        secondary: 'gray',
+        primary: 'yellow',
+        secondary: 'green',
         tertiary:'white',
       },
       font: {
-        primary: 'white',
+        primary: 'black',
         secondary: 'gray',
         tertiary:'black',
       }
     },
     fonts: ["sans-serif", "Roboto"],
     fontSizes: {
-      subTitle: "2em",
-      title: "3em"
+      header:"4.5vw",
+      headerSubtitle: "2.5vw",
+      normal:"20px",
+    },
+    fontWeight: {
+      normal: 300,
+      bold: 700,
     }
   };
 

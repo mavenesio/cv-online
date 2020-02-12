@@ -6,9 +6,10 @@ import PropTypes from 'prop-types';
 const DataContainer = styled.div`
     display:flex;
     flex-direction:column;
+    color: ${props=> props.theme.colors.font.primary};
 `;
 const DataName = styled.div`
-    font-size:20px;
+    font-size:${props=> props.theme.colors.font.normal};;
     padding-left:0.5rem;
     padding-bottom:1rem;
 `;
