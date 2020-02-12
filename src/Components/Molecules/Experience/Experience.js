@@ -20,7 +20,6 @@ const TimeColumn = styled.div `
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    flex-basis: 100%;
     flex: 1;
 `;
 const ExperienceColumn = styled.div`
@@ -28,8 +27,8 @@ const ExperienceColumn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    flex-basis: 100%;
-    flex: 4;
+    margin-left:0.5rem;
+    flex: 5;
 `;
 
 const ExperienceHeader = styled.div`
@@ -40,6 +39,7 @@ const ExperienceHeader = styled.div`
 `;
 const ExperienceTitle = styled.div`
     display:flex;
+    flex-wrap:wrap;
     flex-direction:row;
     justify-content:space-between;
     width:100%;
@@ -50,6 +50,10 @@ const TitleWrapper = styled.div`
 const LeftTitleWrapper = styled.div`
     color:gray;
 `;
+const TimeWrapper = styled.div`
+    display:flex;
+    align-self:flex-start;
+`;
 
 class Experience extends React.Component {
 
@@ -58,7 +62,8 @@ class Experience extends React.Component {
     return (
         <ExperienceContainer>
                 <TimeColumn>
-                        {from} - {to} 
+                    <TimeWrapper>{`${to}`}</TimeWrapper>
+                    <TimeWrapper>{`${from}`}</TimeWrapper>
                 </TimeColumn>
                 <ExperienceColumn>
                     <Row>

@@ -88,19 +88,19 @@ const experiences = [
 const education = [
     {
         title:'Licenciatura En Sistemas',
-        subTitle:'',
+        subTitle:'Facultad de Ingenieria de Buenos Aires (FIUBA)',
         from:'2013',
         to:'Actualidad',
         description:'',
-        leftTitle:'Facultad de Ingenieria de Buenos Aires (FIUBA)',
+        leftTitle:'',
     },
     {
         title:'Bachiller, modalidad Ciencias Sociales',
-        subTitle:'',
+        subTitle:'Instituto Saturnino E Unzue, 25 de Mayo',
         from:'2004',
         to:'2009',
         description:'',
-        leftTitle:'Instituto Saturnino E Unzue, 25 de Mayo',
+        leftTitle:'',
     }
 ];
 export {

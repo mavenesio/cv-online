@@ -50,7 +50,7 @@ const PrimaryColumn = styled.div `
         margin-left: 10vw;
         margin-right: 10vw;
     }
-    padding: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
 `;
 const SecondaryColumn = styled.div`
     display: flex;
@@ -63,7 +63,7 @@ const SecondaryColumn = styled.div`
         margin-left: 10vw;
         margin-right: 10vw;
     }
-    padding: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
 `;
 const Image = styled.img`
     height:auto;
@@ -72,8 +72,7 @@ const Image = styled.img`
     border: black solid 2px;
 `;
 const Paragraph = styled.div`
-    text-align: justify;
-    text-justify: inter-word;
+    text-align:start;
 `;
 class Homepage extends React.Component {
   
