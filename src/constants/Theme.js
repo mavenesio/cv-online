@@ -6,12 +6,12 @@ import { ThemeProvider } from "styled-components";
 const theme = {
     colors: {
       background: {
-        primary: 'yellow',
-        secondary: 'green',
+        primary: 'Black',
+        secondary: 'gray',
         tertiary:'white',
       },
       font: {
-        primary: 'black',
+        primary: 'white',
         secondary: 'gray',
         tertiary:'black',
       }
