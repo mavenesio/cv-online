@@ -28,12 +28,19 @@ import download from '../assets/SocialMedia/download.png';
 
 import downloadLink from '../assets/Curriculim_Vitae_Mariano_Andres_Venesio_B__F_.pdf';
 
+const firstName = 'Mariano Andrés';
+const lastName = 'Venesio Bianchi Fiorito';
+const job = 'Full-Stack Web Developer';
 const linkedinLink = 'https://www.linkedin.com/in/mariano-andr%C3%A9s-venesio-bianchi-fiorito-a544568b/'
 const githubLink = 'https://github.com/Venedictto?tab=repositories'
 
 const profilePicture = profilepicture;
-const description = 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
 
+const description = {
+    title: 'Resumen',
+    titleColor: '#32a852',
+    copy: 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
+}
 const frontEndSkills = [
     {name:'JavaScript', logo:javascript},
     {name:'AngularJs', logo:angularjs},
@@ -60,6 +67,14 @@ const contactData = [
     {name:'mavenesio@gmail.com', logo:email},
     {name:'Palermo, CABA, Argentina', logo:location}
 ];
+
+
+const firstColumnData = [
+    {title:'Datos Personales', data: contactData},
+    {title:'Front-End Skills', data: frontEndSkills},
+    {title:'Back-End Skills', data: backEndSkills},
+    {title:'Other Skills', data: otherSkills},
+]
 const experiences = [
     {
         title:'Codea IT',
@@ -104,20 +119,18 @@ const education = [
         leftTitle:'',
     }
 ];
-const firstName = 'Mariano Andrés';
-const lastName = 'Venesio Bianchi Fiorito';
-const job = 'Full-Stack Web Developer';
+
+const secondColumnData = [
+    {title:'Experiencia', titleColor:'#a83269', data:experiences},
+    {title:'Educación', titleColor:'#328fa8', data:education},];
 export {
         job,
         firstName,
         lastName,
         description,
         education,
-        frontEndSkills,
-        backEndSkills,
-        otherSkills,
-        experiences,
-        contactData,
+        firstColumnData,
+        secondColumnData,
         profilePicture,
         github,
         linkedin,
