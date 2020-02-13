@@ -27,20 +27,12 @@ const BodyContainer = styled.div`
 const Homepage = () => {
     return (
         <HomepageContainer>
-            <Header 
-                firstName={constants.firstName}
-                lastName={constants.lastName}
-                subTitle={constants.job}
-            />
+            <Header {...constants.headerData}/>
             <BodyContainer>
-                <LeftColumn/>
-                <RightColumn/>
+                <LeftColumn {...constants.leftColumnData}/>
+                <RightColumn {...constants.rightColumnData}/>
             </BodyContainer>
-            <Footer
-                linkedin={constants.linkedinLink}
-                github={constants.githubLink}
-                download={constants.downloadLink}
-            />
+            <Footer {...constants.footerData}/>
         </HomepageContainer>
     );
 }

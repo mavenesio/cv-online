@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as constants from '../../../constants/es-ES'
 import PropTypes from 'prop-types';
 
 const FooterContainer = styled.div`
@@ -10,49 +9,34 @@ const FooterContainer = styled.div`
     margin-top:2rem;
     background-color: ${props=> props.theme.colors.background.secondary};
 `;
-
 const SocialMediaButton = styled.a`
     padding:2rem;
 `;
+const renderFooter = (data) => {
+    return data.map( section => {
+            return (
+                <SocialMediaButton href={section.link} target="_blank" key={section.icon}>
+                    <img 
+                        src={section.icon} 
+                        alt=""
+                        height='50'
+                        width='50'
+                    />
+                </SocialMediaButton>
+            )
+        }
+    );
+} 
 
-
-class Footer extends React.Component {
-  render() {
-      const {linkedin, github, download} = this.props;
+const Footer = (props) => {
     return (
         <FooterContainer>
-            <SocialMediaButton href={linkedin} target="_blank">
-                <img 
-                    src={constants.linkedin} 
-                    alt=""
-                    height='50'
-                    width='50'
-                />
-            </SocialMediaButton>
-            <SocialMediaButton href={github} target="_blank"> 
-                <img 
-                    src={constants.github}
-                    alt=""
-                    height='50'
-                    width='50'
-                />
-            </SocialMediaButton>
-            <SocialMediaButton href={download} target="_blank">
-                <img 
-                    src={constants.download}
-                    alt=""
-                    height='50'
-                    width='50'
-                />
-            </SocialMediaButton>
+           {renderFooter(props.data)} 
         </FooterContainer>
     );
-  }
 }
 Footer.propTypes = {
-    linkedin: PropTypes.string,
-    github: PropTypes.string,
-    download: PropTypes.string,
+    data: PropTypes.array.isRequired,
   }
 
 export default Footer;

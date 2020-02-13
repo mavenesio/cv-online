@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import DataList from '../../Molecules/DataList/DataList';
 import Card from '../../Atoms/Card/Card';
-import * as constants from '../../../constants/es-ES'
 
 const Image = styled.img`
     height:auto;
@@ -29,8 +29,8 @@ const Row = styled.div`
     width: 100%;
     padding: 1rem;
 `;
-const renderExtraData = ()=>{
-    return constants.firstColumnData.map( section => {
+const renderExtraData = (data)=>{
+    return data.map( section => {
             return (
                 <Row key={section.title}>
                     <Card title={section.title}>
@@ -41,14 +41,18 @@ const renderExtraData = ()=>{
         }
     );
 }
-const LeftColumn = ({props}) => {
+const LeftColumn = (props) => {
     return (
         <PrimaryColumn>
             <Row>
-                <Image src={constants.profilePicture} />
+                <Image src={props.profilePicture}/>
             </Row>
-            {renderExtraData()}
+            {renderExtraData(props.data)}
         </PrimaryColumn>
     );
+}
+LeftColumn.propTypes = {
+    data: PropTypes.array,
+    profilePicture: PropTypes.string,
 }
 export default LeftColumn;

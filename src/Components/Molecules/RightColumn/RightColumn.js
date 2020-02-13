@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Card from '../../Atoms/Card/Card';
 import ExperienceList from '../../Molecules/Experience/ExperienceList';
-import * as constants from '../../../constants/es-ES';
 
 const SecondaryColumn = styled.div`
     display: flex;
@@ -26,8 +26,8 @@ const Row = styled.div`
 const Paragraph = styled.div`
     text-align:start;
 `;
-const renderExtraData = ()=>{
-    return constants.secondColumnData.map( section => {
+const renderExtraData = (data) => {
+    return data.map( section => {
             return (
                 <Row key={section.title}>
                     <Card title={section.title} titleColor={section.titleColor}>
@@ -38,16 +38,20 @@ const renderExtraData = ()=>{
         }
     );
 }
-const RightColumn = ({props}) => {
+const RightColumn = (props) => {
     return (
         <SecondaryColumn>
             <Row> 
-                <Card title={constants.description.title} titleColor={constants.description.titleColor}>
-                    <Paragraph>{constants.description.copy}</Paragraph>
+                <Card title={props.description.title} titleColor={props.description.titleColor}>
+                    <Paragraph>{props.description.copy}</Paragraph>
                 </Card>
             </Row>
-            {renderExtraData()}
+            {renderExtraData(props.data)}
         </SecondaryColumn>
     );
+}
+RightColumn.propTypes = {
+    data: PropTypes.array,
+    description: PropTypes.object,
 }
 export default RightColumn;
