@@ -2,6 +2,7 @@
 import profilepicture from '../assets/profilepicture.png';
 
 import angular from '../assets/Logos/angular.svg';
+import angularjs from '../assets/Logos/angularjs.svg';
 import css from '../assets/Logos/css.svg';
 import html from '../assets/Logos/html.svg';
 import javascript from '../assets/Logos/javascript.svg';
@@ -35,7 +36,7 @@ const description = 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) c
 
 const frontEndSkills = [
     {name:'JavaScript', logo:javascript},
-    {name:'AngularJs', logo:angular},
+    {name:'AngularJs', logo:angularjs},
     {name:'Angular 8', logo:angular},
     {name:'React', logo:react},
     {name:'HTML5', logo:html},
