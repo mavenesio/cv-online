@@ -17,30 +17,23 @@ const DataWrapper = styled.div`
   display:flex;
   flex-direction:row;
 `;
-class DataList extends React.Component {
-
-  renderData = () => {
-    return this.props.data.map((fact,index) => {
+const renderData = (data) => {
+  return data.map((fact,index) => 
+    {
       return (
         <DataWrapper key={index+fact.name}>
-          <img 
-            src={fact.logo}  
-            height='30' 
-            width='30'
-            alt={fact.name}
-            />
+          <img src={fact.logo} height='30' width='30' alt={fact.name}/>
           <DataName>{fact.name}</DataName>
         </DataWrapper>)
-        } 
-      )
-  } 
-  render() {
-    return (
-        <DataContainer>
-            {this.renderData()}
-        </DataContainer>
-    );
-  }
+    } 
+  )
+} 
+const DataList = (props) => {
+  return (
+      <DataContainer>
+          {renderData(props.data)}
+      </DataContainer>
+  );
 }
 DataList.propTypes = {
     data: PropTypes.array.isRequired

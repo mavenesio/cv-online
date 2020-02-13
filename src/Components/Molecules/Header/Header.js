@@ -36,31 +36,26 @@ const HeaderSubtitle = styled.h3`
     margin-bottom: unset;
 `;
 
-class Header extends React.Component {
-    
-    render() {
-        const {firstName, lastName, subTitle} = this.props;
-        return (
-            <HeaderContainer>
-                <HeaderName>
-                    <HeaderFirstname>
-                        {firstName},
-                    </HeaderFirstname>
-                    <HeaderLastname>
-                        {lastName}
-                    </HeaderLastname>
-                </HeaderName>
-                <HeaderSubtitle>
-                        {subTitle}
-                </HeaderSubtitle>
-            </HeaderContainer>
-        );
-    }
+const Header = (props) => {
+    return (
+        <HeaderContainer>
+            <HeaderName>
+                <HeaderFirstname>
+                    {props.firstName},
+                </HeaderFirstname>
+                <HeaderLastname>
+                    {props.lastName}
+                </HeaderLastname>
+            </HeaderName>
+            <HeaderSubtitle>
+                    {props.subTitle}
+            </HeaderSubtitle>
+        </HeaderContainer>
+    );
 }
 Header.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     subTitle: PropTypes.string,
-  }
-
+}
 export default Header;

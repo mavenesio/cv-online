@@ -6,23 +6,20 @@ import Rating from 'react-rating';
 const SkillRatingContainer = styled.div`
 `;
 
-class SkillRating extends React.Component {
-  render() {
-    const {skillLevel, skill} = this.props;
-    return (
-        <SkillRatingContainer>
-          <div>
-            {skill}
-          </div>
-          <div>
-            <Rating 
-              initialRating={skillLevel}
-              readonly
-                />
-          </div>
-        </SkillRatingContainer>
-    );
-  }
+const SkillRating = (props) => {
+  return (
+      <SkillRatingContainer>
+        <div>
+          {props.skill}
+        </div>
+        <div>
+          <Rating 
+            initialRating={props.skillLevel}
+            readonly
+              />
+        </div>
+      </SkillRatingContainer>
+  );
 }
 SkillRating.propTypes = {
   skillLevel: PropTypes.number.isRequired,

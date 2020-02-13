@@ -56,35 +56,31 @@ const TimeWrapper = styled.div`
     align-self:flex-start;
 `;
 
-class Experience extends React.Component {
-
-  render() {
-    const {from, to, description, subTitle, leftTitle,title} = this.props;
+const Experience = (props) => {
     return (
         <ExperienceContainer>
                 <TimeColumn>
-                    <TimeWrapper>{`${to}`}</TimeWrapper>
-                    <TimeWrapper>{`${from}`}</TimeWrapper>
+                    <TimeWrapper>{`${props.to}`}</TimeWrapper>
+                    <TimeWrapper>{`${props.from}`}</TimeWrapper>
                 </TimeColumn>
                 <ExperienceColumn>
                     <Row>
                         <ExperienceHeader>
                             <ExperienceTitle>
-                                <TitleWrapper>{title}</TitleWrapper>
-                                <LeftTitleWrapper>{leftTitle}</LeftTitleWrapper> 
+                                <TitleWrapper>{props.title}</TitleWrapper>
+                                <LeftTitleWrapper>{props.leftTitle}</LeftTitleWrapper> 
                             </ExperienceTitle>
                             <div>
-                                {subTitle}
+                                {props.subTitle}
                             </div>
                         </ExperienceHeader>
                     </Row>
                     <Row>
-                        {description}
+                        {props.description}
                     </Row>
                 </ExperienceColumn>
         </ExperienceContainer>
     );
-  }
 }
 Experience.propTypes = {
     from: PropTypes.string.isRequired,

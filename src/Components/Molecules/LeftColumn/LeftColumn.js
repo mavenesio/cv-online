@@ -4,7 +4,6 @@ import DataList from '../../Molecules/DataList/DataList';
 import Card from '../../Atoms/Card/Card';
 import * as constants from '../../../constants/es-ES'
 
-
 const Image = styled.img`
     height:auto;
     width:90%;
@@ -30,8 +29,6 @@ const Row = styled.div`
     width: 100%;
     padding: 1rem;
 `;
-
-
 const renderExtraData = ()=>{
     return constants.firstColumnData.map( section => {
             return (
@@ -44,15 +41,14 @@ const renderExtraData = ()=>{
         }
     );
 }
-
 const LeftColumn = ({props}) => {
-        return (
-            <PrimaryColumn>
-                <Row>
-                    <Image src={constants.profilePicture} />
-                </Row>
-                {renderExtraData()}
-            </PrimaryColumn>
-        );
+    return (
+        <PrimaryColumn>
+            <Row>
+                <Image src={constants.profilePicture} />
+            </Row>
+            {renderExtraData()}
+        </PrimaryColumn>
+    );
 }
 export default LeftColumn;

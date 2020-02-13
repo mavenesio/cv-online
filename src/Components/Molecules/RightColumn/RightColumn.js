@@ -4,7 +4,6 @@ import Card from '../../Atoms/Card/Card';
 import ExperienceList from '../../Molecules/Experience/ExperienceList';
 import * as constants from '../../../constants/es-ES';
 
-
 const SecondaryColumn = styled.div`
     display: flex;
     flex-direction: column;
@@ -24,11 +23,9 @@ const Row = styled.div`
     width: 100%;
     padding: 1rem;
 `;
-
 const Paragraph = styled.div`
     text-align:start;
 `;
-
 const renderExtraData = ()=>{
     return constants.secondColumnData.map( section => {
             return (
@@ -41,17 +38,16 @@ const renderExtraData = ()=>{
         }
     );
 }
-
 const RightColumn = ({props}) => {
-        return (
-            <SecondaryColumn>
-                <Row> 
-                    <Card title={constants.description.title} titleColor={constants.description.titleColor}>
-                        <Paragraph>{constants.description.copy}</Paragraph>
-                    </Card>
-                </Row>
-                {renderExtraData()}
-            </SecondaryColumn>
-        );
+    return (
+        <SecondaryColumn>
+            <Row> 
+                <Card title={constants.description.title} titleColor={constants.description.titleColor}>
+                    <Paragraph>{constants.description.copy}</Paragraph>
+                </Card>
+            </Row>
+            {renderExtraData()}
+        </SecondaryColumn>
+    );
 }
 export default RightColumn;

@@ -25,21 +25,18 @@ const ColorlessTitle = styled.h1`
     margin-top:unset;
 `;
 
-class Card extends React.Component {
-  render() {
-    const {title, titleColor} = this.props;
+const Card = (props) => {
     return (
         <CardContainer>
-        {title && 
+        {props.title && 
             <TittleContainer>
-                <ColorTitle titleColor={titleColor}> {title.substr(0,3)}</ColorTitle>
-                <ColorlessTitle> {title.substr(3,title.length)}</ColorlessTitle>
+                <ColorTitle titleColor={props.titleColor}> {props.title.substr(0,3)}</ColorTitle>
+                <ColorlessTitle> {props.title.substr(3,props.title.length)}</ColorlessTitle>
             </TittleContainer>
         }
-            {this.props.children}
+            {props.children}
         </CardContainer>
     );
-  }
 }
 Card.propTypes = {
     title: PropTypes.string,

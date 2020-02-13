@@ -24,28 +24,25 @@ const BodyContainer = styled.div`
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 `;
-class Homepage extends React.Component {
-  
-    render() {
-        return (
-            <HomepageContainer>
-                <Header 
-                    firstName={constants.firstName}
-                    lastName={constants.lastName}
-                    subTitle={constants.job}
-                />
-                <BodyContainer>
-                    <LeftColumn/>
-                    <RightColumn/>
-                </BodyContainer>
-                <Footer
-                    linkedin={constants.linkedinLink}
-                    github={constants.githubLink}
-                    download={constants.downloadLink}
-                />
-            </HomepageContainer>
-        );
-    }
+const Homepage = () => {
+    return (
+        <HomepageContainer>
+            <Header 
+                firstName={constants.firstName}
+                lastName={constants.lastName}
+                subTitle={constants.job}
+            />
+            <BodyContainer>
+                <LeftColumn/>
+                <RightColumn/>
+            </BodyContainer>
+            <Footer
+                linkedin={constants.linkedinLink}
+                github={constants.githubLink}
+                download={constants.downloadLink}
+            />
+        </HomepageContainer>
+    );
 }
 
 export default Homepage;
