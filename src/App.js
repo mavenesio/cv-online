@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 import Homepage from './Components/Pages/Homepage/Homepage';
-import Theme from './constants/Theme';
+import darkTheme from './constants/DarkTheme';
+import lightTheme from './constants/LightTheme';
+
+
+import { ThemeProvider } from "styled-components";
 
 class App extends Component {
   render() {
     return (
-      <Theme>
-        <div className="App">
-          <Homepage/>
-        </div>
-      </Theme>
+          <ThemeProvider theme={darkTheme}>
+            <div className="App">
+              <Homepage/>
+            </div>
+          </ThemeProvider>  
     );
   }
 }
