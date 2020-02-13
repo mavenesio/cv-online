@@ -6,7 +6,7 @@ const darkTheme = {
         tertiary:'white',
       },
       font: {
-        primary: 'white',
+        primary: 'lightgray',
         secondary: 'gray',
         tertiary:'black',
       }
