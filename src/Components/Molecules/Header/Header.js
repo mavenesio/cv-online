@@ -3,14 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const HeaderContainer = styled.div`
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     color: ${props=> props.theme.colors.font.primary};
     background: ${props=> props.theme.colors.background.primary};
 `;

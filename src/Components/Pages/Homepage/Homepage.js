@@ -12,7 +12,8 @@ const HomepageContainer = styled.div`
     background: linear-gradient(180deg, ${props=> props.theme.colors.background.primary} 0%, ${props=> props.theme.colors.background.secondary} 35%);
     display:flex;
     flex-direction:column;
-    justify-content:center
+    justify-content:center;
+    cursor: default;
 `;
 
 const BodyContainer = styled.div`

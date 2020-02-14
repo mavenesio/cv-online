@@ -31,7 +31,7 @@ import downloadLink from '../assets/Curriculim_Vitae_Mariano_Andres_Venesio_B__F
 const headerData = {
     firstName:'Mariano Andrés',
     lastName:'Venesio Bianchi Fiorito',
-    job:'Full-Stack Web Developer',
+    subTitle:'Full-Stack Web Developer',
 }
 const leftColumnData = {
     profilePicture: profilepicture,
