@@ -44,10 +44,13 @@ const renderExtraData = (data)=>{
 const LeftColumn = (props) => {
     return (
         <PrimaryColumn>
-            <Row>
-                <Image src={props.profilePicture}/>
-            </Row>
-            {renderExtraData(props.data)}
+            {
+                props.profilePicture &&
+                <Row>
+                    <Image src={props.profilePicture}/>
+                </Row>
+            }
+            {props.data && renderExtraData(props.data)}
         </PrimaryColumn>
     );
 }

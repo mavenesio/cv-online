@@ -31,7 +31,7 @@ const renderFooter = (data) => {
 const Footer = (props) => {
     return (
         <FooterContainer>
-           {renderFooter(props.data)} 
+            { props.data && renderFooter(props.data)}
         </FooterContainer>
     );
 }

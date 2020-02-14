@@ -41,12 +41,14 @@ const renderExtraData = (data) => {
 const RightColumn = (props) => {
     return (
         <SecondaryColumn>
-            <Row> 
-                <Card title={props.description.title} titleColor={props.description.titleColor}>
-                    <Paragraph>{props.description.copy}</Paragraph>
-                </Card>
-            </Row>
-            {renderExtraData(props.data)}
+            {props.description &&
+                <Row> 
+                    <Card title={props.description.title} titleColor={props.description.titleColor}>
+                        <Paragraph>{props.description.copy}</Paragraph>
+                    </Card>
+                </Row>
+            }
+            {props.data && renderExtraData(props.data)}
         </SecondaryColumn>
     );
 }
