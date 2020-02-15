@@ -74,12 +74,17 @@ const leftColumnData = {
 
 }
 const rightColumnData = {
-    description: {
-        title: 'Resumen',
-        titleColor: '#32a852',
-        copy: 'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.'
-    },
     data: [
+        {
+            title:'Resumen',
+            titleColor:'#32a852',
+            data:[
+                {
+                    description:'Estudiante de Licenciatura en Análisis de Sistemas (UBA) con tres años de experiencia como desarrollador web FullStack. Soy capaz de aprender de forma constante y responsable, una persona proactiva con capacidad de adaptarse a los cambios. Siempre busco obtener el mejor resultado posible para mi equipo, aportando nuevas ideas y soluciones. Puedo captar rápidamente nuevas tecnologías y diferentes procesos.',
+                    leftTitle:'',
+                }
+            ]
+        },
         {
             title:'Experiencia',
             titleColor:'#a83269',

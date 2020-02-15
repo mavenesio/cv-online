@@ -1,14 +1,14 @@
 const darkTheme = {
     colors: {
       background: {
-        primary: 'Black',
-        secondary: 'gray',
-        tertiary:'white',
+        primary: '#263238',
+        secondary: '#cfd8dc',
+        tertiary:'#cfd8dc',
       },
       font: {
-        primary: 'lightgray',
-        secondary: 'gray',
-        tertiary:'black',
+        primary: '#cfd8dc',
+        secondary: '#cfd8dc',
+        tertiary:'#263238',
       }
     },
     fonts: ["sans-serif", "Roboto"],

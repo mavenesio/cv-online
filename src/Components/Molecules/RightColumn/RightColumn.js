@@ -23,9 +23,6 @@ const Row = styled.div`
     width: 100%;
     padding: 1rem;
 `;
-const Paragraph = styled.div`
-    text-align:start;
-`;
 const renderExtraData = (data) => {
     return data.map( section => {
             return (
@@ -41,13 +38,6 @@ const renderExtraData = (data) => {
 const RightColumn = (props) => {
     return (
         <SecondaryColumn>
-            {props.description &&
-                <Row> 
-                    <Card title={props.description.title} titleColor={props.description.titleColor}>
-                        <Paragraph>{props.description.copy}</Paragraph>
-                    </Card>
-                </Row>
-            }
             {props.data && renderExtraData(props.data)}
         </SecondaryColumn>
     );

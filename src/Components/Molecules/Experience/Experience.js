@@ -59,22 +59,28 @@ const TimeWrapper = styled.div`
 const Experience = (props) => {
     return (
         <ExperienceContainer>
+            {
+                (props.to  && props.from) &&
                 <TimeColumn>
                     <TimeWrapper>{`${props.to}`}</TimeWrapper>
                     <TimeWrapper>{`${props.from}`}</TimeWrapper>
                 </TimeColumn>
+            }
                 <ExperienceColumn>
-                    <Row>
-                        <ExperienceHeader>
-                            <ExperienceTitle>
-                                <TitleWrapper>{props.title}</TitleWrapper>
-                                <LeftTitleWrapper>{props.leftTitle}</LeftTitleWrapper> 
-                            </ExperienceTitle>
-                            <div>
-                                {props.subTitle}
-                            </div>
-                        </ExperienceHeader>
-                    </Row>
+                    {
+                    (props.title || props.leftTitle || props.subTitle) &&
+                        <Row>
+                            <ExperienceHeader>
+                                <ExperienceTitle>
+                                    <TitleWrapper>{props.title}</TitleWrapper>
+                                    <LeftTitleWrapper>{props.leftTitle}</LeftTitleWrapper> 
+                                </ExperienceTitle>
+                                <div>
+                                    {props.subTitle}
+                                </div>
+                            </ExperienceHeader>
+                        </Row>
+                    }
                     <Row>
                         {props.description}
                     </Row>
@@ -83,12 +89,12 @@ const Experience = (props) => {
     );
 }
 Experience.propTypes = {
-    from: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    subTitle:PropTypes.string.isRequired,
-    leftTitle:PropTypes.string.isRequired,
-    title:PropTypes.string.isRequired,
+    from: PropTypes.string,
+    to: PropTypes.string,
+    description: PropTypes.string,
+    subTitle:PropTypes.string,
+    leftTitle:PropTypes.string,
+    title:PropTypes.string,
   }
 
 export default Experience;
