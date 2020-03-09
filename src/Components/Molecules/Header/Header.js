@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom:1rem;
+    padding-bottom:2rem;
     color: ${props=> props.theme.colors.font.primary};
     background: ${props=> props.theme.colors.background.primary};
 `;

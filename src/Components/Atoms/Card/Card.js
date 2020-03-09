@@ -11,6 +11,7 @@ const CardContainer = styled.div`
     width:100%;
     min-width:250px;
     flex-direction:column;
+    border-radius:10px;
     color: ${props=> props.theme.colors.font.primary};
 `;
 const TittleContainer = styled.div`
@@ -19,7 +20,7 @@ const TittleContainer = styled.div`
 `;
 const ColorTitle = styled.h1`
     margin-top:unset;
-    color: ${props => (props.titleColor === undefined) ? props.theme.colors.font.primary : props.titleColor}
+    color: ${props => (props.titleColor === undefined) ? props.theme.colors.font.primary : props.titleColor};
 `; 
 const ColorlessTitle = styled.h1`
     margin-top:unset;
@@ -40,7 +41,6 @@ const Card = (props) => {
 }
 Card.propTypes = {
     title: PropTypes.string,
-    titleColor: PropTypes.string,
   }
 
 export default Card;
