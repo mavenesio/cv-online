@@ -5,10 +5,21 @@ import DataList from '../../Molecules/DataList/DataList';
 import Card from '../../Atoms/Card/Card';
 
 const Image = styled.img`
-    height:auto;
-    width:90%;
-    border-radius:50%;
-    border: black solid 2px;
+    width:100%;
+    height:100%;
+    display:flex;
+`;
+const ImageCard = styled.div`
+    box-shadow: 4px 20px 20px 4px rgba(0,0,0,0.7);
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    padding: 1rem 2rem 0rem 2rem;
+    width:100%;
+    min-width:250px;
+    align-items:flex-end;
+    overflow:hidden;
+    border-radius:10px;
 `;
 const PrimaryColumn = styled.div `
     display: flex;
@@ -23,6 +34,7 @@ const PrimaryColumn = styled.div `
     }
     padding: 0rem 1rem 0rem 1rem;
 `;
+
 const Row = styled.div`
     display: flex;
     flex-direction: row;
@@ -47,7 +59,9 @@ const LeftColumn = (props) => {
             {
                 props.profilePicture &&
                 <Row>
-                    <Image src={props.profilePicture}/>
+                    <ImageCard>
+                        <Image src={props.profilePicture}/>
+                    </ImageCard>
                 </Row>
             }
             {props.data && renderExtraData(props.data)}
