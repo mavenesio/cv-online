@@ -149,7 +149,7 @@ const footerData = {
             link:'https://github.com/Venedictto?tab=repositories'
         },{
             icon:download,
-            link:{downloadLink}
+            link:`${downloadLink}`
         }
     ]
 }
