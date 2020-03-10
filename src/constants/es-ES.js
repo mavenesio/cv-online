@@ -20,7 +20,7 @@ import macos from '../assets/Logos/macos.svg';
 import location from '../assets/Logos/location.svg';
 import email from '../assets/Logos/email.svg';
 import phone from '../assets/Logos/phone.png';
-import user from '../assets/Logos/user.png';
+import user from '../assets/Logos/user.svg';
 
 import github from '../assets/SocialMedia/github.svg';
 import linkedin from '../assets/SocialMedia/linkedin.svg';
