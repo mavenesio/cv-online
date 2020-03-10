@@ -13,8 +13,8 @@ const darkTheme = {
     },
     fonts: ["sans-serif", "Roboto"],
     fontSizes: {
-      header:"4.5vw",
-      headerSubtitle: "2.5vw",
+      header:"5.5vw",
+      headerSubtitle: "3.5vw",
       normal:"20px",
     },
     fontWeight: {
