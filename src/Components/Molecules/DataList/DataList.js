@@ -11,11 +11,12 @@ const DataContainer = styled.div`
 const DataName = styled.div`
     font-size:${props=> props.theme.colors.font.normal};;
     padding-left:0.5rem;
-    padding-bottom:1rem;
 `;
 const DataWrapper = styled.div`
   display:flex;
   flex-direction:row;
+  align-items:center;
+  padding-bottom:1rem;
 `;
 const renderData = (data) => {
   return data.map((fact,index) => 
