@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 import profilepicture from '../assets/profilepicture.png';
 
@@ -7,6 +8,10 @@ import css from '../assets/Logos/css.svg';
 import html from '../assets/Logos/html.svg';
 import javascript from '../assets/Logos/javascript.svg';
 import react from '../assets/Logos/react.svg';
+
+import nextjs from '../assets/Logos/nextjs.png';
+import apollo from '../assets/Logos/apollo.png';
+import graphql from '../assets/Logos/graphql.svg';
 
 import mongo from '../assets/Logos/mongo.svg';
 import netcore from '../assets/Logos/netcore.svg';
@@ -51,6 +56,8 @@ const leftColumnData = {
                 {name:'AngularJs', logo:angularjs},
                 {name:'Angular 8', logo:angular},
                 {name:'React', logo:react},
+                {name:'Nextjs', logo:nextjs},
+                {name:'Apollo cliente', logo:apollo},
                 {name:'HTML5', logo:html},
                 {name:'CSS3', logo:css}
             ]
@@ -58,6 +65,8 @@ const leftColumnData = {
             title:'Back-End Skills',
             data: [
                 {name:'NodeJs', logo:node},
+                {name:'GraphQL', logo:graphql},
+                {name:'Apollo server', logo:apollo},
                 {name:'.NET', logo:netcore},
                 {name:'SQL/MySql/PostgreSQL', logo:sql},
                 {name:'MongoDB', logo:mongo}
