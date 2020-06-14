@@ -44,7 +44,7 @@ const leftColumnData = {
         {
             title:'Datos Personales',
             data: [
-                {name:'28 años, Argentino ', logo:user},
+                {name:'9 de enero 1992 (28 años)', logo:user},
                 {name:'(011)1556589904', logo:phone},
                 {name:'mavenesio@gmail.com', logo:email},
                 {name:'Palermo, CABA, Argentina', logo:location}
@@ -102,7 +102,7 @@ const rightColumnData = {
                     title:'Codea IT',
                     subTitle:'Full-Stack web developer',
                     from:'2019',
-                    to:'Actualidad',
+                    to:'Act.',
                     description:'Actualmente me encuentro desempeñando el rol de desarrollador FullStack en diferentes proyectos usando una gran variedad de tecnologías como Angular 8, React with typescript, NodeJs, NET core, mongoDB, My SQL, entre otras.',
                     leftTitle:'Ciudad Autónoma de BuenosAires, Argentina',
                 },
@@ -132,7 +132,7 @@ const rightColumnData = {
                     title:'Licenciatura En Sistemas',
                     subTitle:'Facultad de Ingenieria de Buenos Aires (FIUBA)',
                     from:'2013',
-                    to:'Actualidad',
+                    to:'Act.',
                     description:'',
                     leftTitle:'',
                 },
